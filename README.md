@@ -30,9 +30,19 @@ A learning repository for browser automation and end-to-end testing using [Playw
 │   │   └── multi_element.spec.ts      # Working with multiple matched elements
 │   ├── Session_State/
 │   │   └── ss1.spec.ts                # Storing/reusing browser session state
-│   └── Project 1/
-│       ├── play_locators.spec.ts      # VWO signup form validation, written with test.step()
-│       └── vwo.spec.ts                # VWO site test scenarios
+│   ├── Project 1/
+│   │   ├── play_locators.spec.ts      # VWO signup form validation, written with test.step()
+│   │   └── vwo.spec.ts                # VWO site test scenarios
+│   └── Web_Table/
+│       ├── table1.spec.ts             # Find a specific employee row and read its columns
+│       ├── table1_dynamic.spec.ts     # Dynamic XPath iteration over table rows/columns
+│       ├── webtable_xpath.spec.ts     # Find a row by value, read a sibling cell via XPath
+│       ├── task1.spec.ts              # Locate and check a checkbox using preceding-sibling XPath
+│       ├── chaining_locators.spec.ts  # Chain a row locator into child cell locators (no pagination)
+│       ├── filter_page_locator.spec.ts # Filter elements with .filter({ hasText }) + count assertion
+│       ├── paginationTask.spec.ts     # Search across paginated table pages until a row is found
+│       ├── employeeWithPagination.spec.ts # Loop through pagination "Next" button until a match is found
+│       └── task.spec.ts               # OrangeHRM PIM table: find and delete a "Terminated" employee row
 ```
 
 ## Concepts Covered
@@ -44,6 +54,7 @@ A learning repository for browser automation and end-to-end testing using [Playw
 - **Locator strategies** — CSS selectors, XPath, XPath functions, and handling multi-element locators.
 - **Session state** — saving and reusing authenticated browser state across tests.
 - **Test steps** — grouping actions with `test.step()` for readable, granular reporting.
+- **Web tables** — iterating rows/columns with dynamic XPath, chaining row locators into child cell locators, filtering rows with `.filter({ hasText })`, and searching across paginated tables by clicking "Next" until a match is found.
 
 ## Reporting
 
