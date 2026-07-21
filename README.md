@@ -40,7 +40,9 @@ A learning repository for browser automation and end-to-end testing using [Playw
 │   │   ├── task1.spec.ts              # Find a specific company's country in a table
 │   │   ├── webtable_xpath.spec.ts     # Select a row checkbox via preceding-sibling XPath
 │   │   ├── filter_page_locator.spec.ts  # Narrow locators with .filter({ hasText }) + count/attr asserts
-│   │   └── chaining_locators.spec.ts  # Chain locators from a filtered row to read its cells
+│   │   ├── chaining_locators.spec.ts  # Chain locators from a filtered row to read its cells
+│   │   ├── paginationTask.spec.ts     # Search across paginated table pages until a row is found
+│   │   └── employeeWithPagination.spec.ts  # Loop through pagination "Next" until a match is found
 │   ├── Session_State/
 │   │   └── ss1.spec.ts                # Storing/reusing browser session state
 │   └── Project 1/
@@ -57,7 +59,7 @@ A learning repository for browser automation and end-to-end testing using [Playw
 - **Parallel navigation** — using `Promise.all` to navigate multiple pages simultaneously.
 - **Locator strategies** — CSS selectors, XPath, XPath functions, and handling multi-element locators.
 - **Filtering & chaining locators** — narrowing matches with `.filter({ hasText })` and chaining from a row locator down to individual cells.
-- **Web tables** — iterating rows/columns with dynamic XPath, reading cell data, and selecting rows via checkboxes.
+- **Web tables** — iterating rows/columns with dynamic XPath, reading cell data, selecting rows via checkboxes, filtering rows with `.filter({ hasText })`, and searching across paginated tables by clicking "Next" until a match is found.
 - **Dropdowns** — native dropdowns, react-select style boxes (single, multi, creatable, async), and autocomplete/search dropdowns.
 - **Form interactions** — filling inputs, checking boxes, submitting, and asserting resulting URLs and validation messages.
 - **Session state** — saving and reusing authenticated browser state across tests.

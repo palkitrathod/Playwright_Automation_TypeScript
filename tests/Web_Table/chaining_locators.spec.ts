@@ -1,3 +1,5 @@
+//Chaining locator without Pagination
+
 import {test,expect} from '@playwright/test'
 {
     test('Verify the pagination', async ({page})=>
