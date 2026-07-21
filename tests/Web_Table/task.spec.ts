@@ -16,12 +16,13 @@ import {test,expect} from '@playwright/test'
 
         //We know the count of ROWS = 50
 
-        const rowCount = await page.locator("oxd-table-card").count()
+        const rows = page.locator(".oxd-table-card")
+        const rowCount = await rows.count()
         console.log("Total Row Count : " + rowCount)
 
-        for (let i =1; i<=rowCount; i++)
+        for (let i =0; i<rowCount; i++)
         {
-            const rowData = await rowCount.nth(i).locator('td').allInnerTexts()
+            const rowData = await rows.nth(i).locator('td').allInnerTexts()
             console.log(`Row $ {i+1}:`,rowData)
             if (rowData.includes("Terminated"))
             {
