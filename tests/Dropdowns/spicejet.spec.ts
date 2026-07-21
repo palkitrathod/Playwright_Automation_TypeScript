@@ -9,7 +9,6 @@ import {test,expect} from '@playwright/test'
         
         //From
         test.setTimeout(60000);
-
         await page.goto("https://www.spicejet.com/", {waitUntil: "domcontentloaded"})
         await page.getByTestId('to-testID-origin').click()
         await page.locator("[data-testid='to-testID-origin'] input").fill("Del")

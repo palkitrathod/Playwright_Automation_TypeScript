@@ -27,11 +27,25 @@ A learning repository for browser automation and end-to-end testing using [Playw
 │   ├── XPath_Functions/
 │   │   └── fun.spec.ts                # XPath functions (contains, text, etc.)
 │   ├── MultiElement_Locators/
-│   │   └── multi_element.spec.ts      # Working with multiple matched elements
+│   │   ├── multi_element.spec.ts      # Working with multiple matched elements
+│   │   └── student_login.spec.ts      # Student login form — fill, checkbox, URL assertion
+│   ├── Dropdowns/
+│   │   ├── dropdown1.spec.ts          # Normal (native) dropdown selection by role/option
+│   │   ├── advanced.spec.ts           # Advanced react-select boxes (single, multi, creatable, async)
+│   │   └── spicejet.spec.ts           # SpiceJet origin/destination autocomplete dropdowns
+│   ├── Web_Table/
+│   │   ├── table1.spec.ts             # Iterate a web table with dynamic XPath to find a row
+│   │   ├── table1_dynamic.spec.ts     # Read all rows of a table dynamically
+│   │   ├── task.spec.ts               # OrangeHRM PIM table — login and iterate rows
+│   │   ├── task1.spec.ts              # Find a specific company's country in a table
+│   │   ├── webtable_xpath.spec.ts     # Select a row checkbox via preceding-sibling XPath
+│   │   ├── filter_page_locator.spec.ts  # Narrow locators with .filter({ hasText }) + count/attr asserts
+│   │   └── chaining_locators.spec.ts  # Chain locators from a filtered row to read its cells
 │   ├── Session_State/
 │   │   └── ss1.spec.ts                # Storing/reusing browser session state
 │   └── Project 1/
 │       ├── play_locators.spec.ts      # VWO signup form validation, written with test.step()
+│       ├── play_selector.spec.ts      # VWO free-trial form validation using Playwright locators
 │       └── vwo.spec.ts                # VWO site test scenarios
 ```
 
@@ -42,6 +56,10 @@ A learning repository for browser automation and end-to-end testing using [Playw
 - **Test runner basics** — writing tests with `test()` and `expect()` from `@playwright/test`, asserting page titles, URLs, and element visibility.
 - **Parallel navigation** — using `Promise.all` to navigate multiple pages simultaneously.
 - **Locator strategies** — CSS selectors, XPath, XPath functions, and handling multi-element locators.
+- **Filtering & chaining locators** — narrowing matches with `.filter({ hasText })` and chaining from a row locator down to individual cells.
+- **Web tables** — iterating rows/columns with dynamic XPath, reading cell data, and selecting rows via checkboxes.
+- **Dropdowns** — native dropdowns, react-select style boxes (single, multi, creatable, async), and autocomplete/search dropdowns.
+- **Form interactions** — filling inputs, checking boxes, submitting, and asserting resulting URLs and validation messages.
 - **Session state** — saving and reusing authenticated browser state across tests.
 - **Test steps** — grouping actions with `test.step()` for readable, granular reporting.
 
